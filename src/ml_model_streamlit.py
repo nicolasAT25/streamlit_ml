@@ -5,7 +5,6 @@ import time
 
 import joblib
 import numpy as np
-import matplotlib.pyplot as plt
 import plotly.express as px
 
 #------------------------------------------------------------------------------------------------
@@ -15,7 +14,7 @@ from sklearn.preprocessing import MinMaxScaler, Binarizer
 from sklearn.pipeline import Pipeline
 
 import input.preprocessors as pp
-from configuraciones import config
+from configurations import config
 
 #------------------------------------------------------------------------------------------------
 
