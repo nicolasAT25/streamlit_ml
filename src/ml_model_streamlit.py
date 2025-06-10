@@ -82,7 +82,7 @@ if st.sidebar.button("Click here to send the CSV to the Pipeline"):
                 nbins=10,
                 labels={"value":"House price"},
                 text_auto=True,
-                title="House Prices Histogram"
+                title="House Prices Predictions - Histogram"
                 )
             
             fig.update_layout(
@@ -93,8 +93,8 @@ if st.sidebar.button("Click here to send the CSV to the Pipeline"):
 
             # ----------------------- Download CSV and predictions ----------------------- #
             df_resultado = datos_procesados.copy()
-            df_resultado['Predicción Escalada'] = prediccion
-            df_resultado['Predicción Sin Escalar'] = prediccion_sin_escalar
+            df_resultado['Scaled prediction'] = prediccion
+            df_resultado['Unscaled prediction'] = prediccion_sin_escalar
 
             st.write('Original data and predictions:')
             st.dataframe(df_resultado)
