@@ -33,8 +33,8 @@ def prediccion_o_inferencia(pipeline_de_test, datos_de_test):
     
     datos_de_test.dropna(subset=new_vars_with_na, inplace=True)
 
-    predicciones = pipeline_de_test.predict(datos_de_test)
-    predicciones_sin_escalar = np.exp(predicciones)
+    predicciones = np.round(pipeline_de_test.predict(datos_de_test), 2)
+    predicciones_sin_escalar = np.round(np.exp(predicciones), 2)
 
     return predicciones, predicciones_sin_escalar, datos_de_test
 
